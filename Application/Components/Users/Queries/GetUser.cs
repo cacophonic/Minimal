@@ -18,7 +18,8 @@ namespace Application.Components.Users.Queries
         {
             public async Task<User> Handle(GetUser request, CancellationToken cancellationToken)
             {
-                return new User { 
+                return new User
+                {
                     Id = request.Id,
                     Name = "Bob"
                 };

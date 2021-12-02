@@ -28,7 +28,7 @@ namespace Application.Services
         public async Task<dynamic> ExecuteCommandWithResult(IServiceRequest request)
         {
             var type = GetCommandAssembly().GetType(request.Type);
-            
+
             var command = JsonConvert.DeserializeObject(request.Data, type);
 
             return await _mediator.Send(command);
